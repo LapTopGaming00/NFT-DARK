@@ -1,0 +1,624 @@
+@import url(font.css);
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: var(--workSans);
+    font-weight: 400;
+    background: var(--bodyBg);
+}
+
+.container {
+    max-width: 1367px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+:root {
+    --workSans: 'Work Sans';
+    --Oxanium: 'Oxanium';
+    --whiteTitle: #fff;
+    --whiteText: #fff;
+    --textYellow: #FFCE4E;
+    --btnYellow: #FFCE4E;
+    --bodyBg: #1C121F;
+    --afterBg: #8613A5;
+    --cardBg: #3D2942;
+    --miniText: #96839B;
+
+}
+
+.nav_content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 38px;
+}
+
+.nav_wrap {
+    display: flex;
+    align-items: center;
+    gap: 161px;
+}
+
+.nav_list {
+    display: flex;
+    gap: 64px;
+}
+
+.nav_linl {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--whiteTitle);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+nav {
+    backdrop-filter: blur(10px);
+}
+
+.nav_linl::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    width: 0;
+    height: 1px;
+    background: var(--btnYellow);
+    transition: 500ms;
+}
+
+
+.nav_linl:hover::after {
+    width: 100%;
+}
+
+.nav_linl:hover {
+    color: var(--btnYellow);
+}
+
+.btnSolid {
+    width: 195px;
+    border: 1px solid var(--btnYellow);
+    color: var(--btnYellow);
+    padding: 21px 0;
+    display: inline-block;
+    background: none;
+    outline: none;
+}
+
+/* zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz header content */
+
+
+.header_left {
+    max-width: 710px;
+    width: 100%;
+}
+
+h2 {
+    font-size: clamp(42px, 5vw, 85px);
+    font-weight: 700;
+    color: var(--whiteTitle);
+    font-family: var(--Oxanium);
+
+    span {
+        color: var(--textYellow);
+    }
+}
+
+
+.header_links {
+    margin-top: 77px;
+    display: flex;
+    gap: 48px;
+    margin-bottom: 121px;
+}
+
+
+.btn {
+    width: 257px;
+    padding: 24px 0;
+    display: inline-block;
+    background: var(--btnYellow);
+    font-size: clamp(18px, 4vw, 28px);
+    border: none;
+    font-weight: 600;
+}
+
+
+.header_number {
+    display: flex;
+    gap: clamp(39px, 7vw, 103px);
+
+}
+
+.header_number_list {
+    h4 {
+        color: var(--whiteTitle);
+        font-size: clamp(36px, 7vw, 62px);
+        text-transform: uppercase;
+        font-weight: 700;
+        margin-bottom: 4px;
+    }
+
+    p {
+        color: var(--miniText);
+        font-size: clamp(16px, 7vw, 24px);
+        text-align: center;
+    }
+
+}
+
+.header_content {
+    margin-top: 139px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 40px;
+}
+
+.header_right_img {
+    max-width: 556px;
+    max-height: 718px;
+    position: relative;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        vertical-align: middle;
+    }
+}
+
+.header_right_box {
+    width: calc(100% - 42px);
+    padding: 18px 39px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    backdrop-filter: blur(5px);
+    background: linear-gradient(92.8deg, rgba(255, 137, 61, 0.09) -52.37%, rgba(250, 250, 250, 0.9) 137.41%);
+    position: absolute;
+    top: 24px;
+    left: 0;
+    right: 0;
+
+
+    span {
+        p {
+            font-size: clamp(15px, 7vw, 18px);
+            color: var(--whiteText);
+            font-weight: 500;
+            margin-bottom: 7px;
+        }
+
+        h6 {
+            font-size: clamp(24px, 7vw, 32px);
+            color: var(--whiteTitle);
+            font-family: var(--Oxanium);
+            font-weight: 700;
+        }
+    }
+}
+
+
+.header_right_info {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px 39px;
+    background: var(--whiteTitle);
+    position: absolute;
+    bottom: 0;
+
+    span {
+        h5 {
+            font-size: clamp(20px, 7vw, 28px);
+            color: #000;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        p {
+            font-size: clamp(16px, 7vw, 24px);
+            color: #000;
+        }
+    }
+
+    .header_right_btn {
+        max-width: 205px;
+    }
+}
+
+header {
+    position: relative;
+}
+
+header::after {
+    content: '';
+    width: 48%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #4F464E73;
+    z-index: -1;
+
+}
+
+.vector_div {
+    display: flex;
+    justify-content: center;
+}
+
+.vector {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background: #6D5B7266;
+    display: inline-block;
+    position: relative;
+
+    .vector_down {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: inline-block;
+        height: 45px;
+        width: 2px;
+        background: var(--whiteText);
+        position: relative;
+
+        &::after {
+            position: absolute;
+            content: '';
+            bottom: -2px;
+            left: -7px;
+            width: 2px;
+            height: 20px;
+            background: var(--whiteText);
+            transform: rotate(-45deg);
+        }
+
+        &::before {
+            position: absolute;
+            content: '';
+            bottom: -2px;
+            right: -7px;
+            width: 2px;
+            height: 20px;
+            background: var(--whiteText);
+            transform: rotate(45deg);
+        }
+
+    }
+
+
+
+}
+
+
+
+/* zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz auctions start*/
+
+
+
+.auctions_brent_wrap {
+    display: flex;
+    align-items: center;
+    gap: 132px;
+}
+
+.auctions_brent {
+    margin-top: 186px;
+    margin-bottom: 184px;
+}
+
+.title {
+    margin-bottom: 84px;
+}
+
+.title_h3 {
+    margin: 0 auto;
+    color: var(--whiteTitle);
+    font-size: clamp(34px, 5vw, 64px);
+    font-weight: 700;
+    font-family: var(--Oxanium);
+    position: relative;
+    width: max-content;
+}
+
+.title_h3::after {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -40px;
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    background: var(--afterBg);
+    z-index: -1;
+}
+
+.auctions_card {
+    flex-shrink: 0;
+    max-width: 495px;
+    width: 100%;
+    padding: 32px;
+    background: var(--cardBg);
+
+    .auctions_card_img {
+        max-width: 431px;
+        max-height: 359px;
+        position: relative;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        button {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            padding: 15px 46px;
+            font-size: clamp(18px, 5vw, 24px);
+            font-weight: 600;
+            background: linear-gradient(125.33deg, #8613A5 18.61%, rgba(250, 250, 250, 0.65) 137.4%);
+            color: var(--whiteText);
+            border: none;
+        }
+    }
+
+}
+
+.auctions_card_user {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 28px;
+    margin-bottom: 28px;
+
+    .auctions_card_user_left {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        span {
+            h5 {
+                font-size: clamp(18px, 5vw, 28px);
+                color: var(--whiteTitle);
+                font-weight: 500;
+                margin-bottom: 8px;
+            }
+
+            p {
+                color: #BDAAC1;
+                font-size: 20px;
+            }
+        }
+    }
+
+    .auctions_card_user_right {
+        font-size: clamp(16px, 5vw, 32px);
+        color: #76607A;
+    }
+
+}
+
+.auctions_card_text {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 40px;
+
+    p {
+        color: #BDAAC1;
+        font-size: clamp(16px, 5vw, 24px);
+    }
+
+    h6 {
+        color: var(--whiteText);
+        font-size: clamp(16px, 5vw, 24px);
+    }
+}
+
+.auctions_card_btn {
+    width: 100%;
+    color: var(--whiteText);
+}
+
+.auctions_cards {
+    display: flex;
+    align-items: center;
+    gap: 42px;
+    overflow-x: auto;
+    padding-bottom: 20px;
+    margin-bottom: 84px;
+
+    &::-webkit-scrollbar {
+        background: none;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: var(--afterBg);
+        border-radius: 10px;
+    }
+}
+
+
+.auctions_btn {
+    text-align: center;
+    margin-bottom: 80px;
+
+    button {
+        max-width: 257px;
+        color: var(--whiteText);
+    }
+}
+
+
+
+/* zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz collactins start  */
+
+
+.works_title {
+    font-size: clamp(32px, 7vw, 64px);
+    color: var(--whiteTitle);
+    font-weight: 700;
+    font-family: var(--Oxanium);
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.works_cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 174px;
+
+    .works_card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        span {
+            display: inline-block;
+            width: 106px;
+            height: 106px;
+            border-radius: 50%;
+            background: var(--cardBg);
+            display: grid;
+            place-items: center;
+            margin-bottom: 32px;
+
+
+            i {
+                color: var(--whiteText);
+                font-size: 40px;
+            }
+        }
+
+        p {
+            color: var(--textYellow);
+            font-size: 20px;
+            font-weight: 600;
+        }
+
+    }
+}
+
+
+
+.collections_title::after {
+    background: #E03054;
+}
+
+
+
+.collections_card {
+    max-width: 525px;
+    width: 100%;
+    padding: 36px;
+    background: var(--cardBg);
+}
+
+.collections_box {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    span {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        color: var(--whiteText);
+        font-size: 32px;
+        font-weight: 500;
+    }
+
+    p {
+        color: var(--miniText);
+        font-size: 20px;
+        font-weight: 600;
+    }
+}
+
+.collections_cards {
+    display: flex;
+    gap: 36px;
+    overflow-x: auto;
+    padding-bottom: 20px;
+
+}
+
+.collections_img {
+    overflow: hidden;
+
+    img {
+        transition: 500ms;
+    }
+}
+
+.collections_card:hover {
+
+    .collections_img img {
+
+        transform: scale(1.3);
+    }
+
+}
+
+.collections_btn {
+    margin-top: 80px;
+}
+
+/* zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz collactins end */
+
+
+.explore_btn {
+    color: #000;
+    text-align: center;
+    max-width: 246px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 500ms;
+}
+
+.explore_cards {
+    margin-top: 80px;
+    display: flex;
+    overflow-x: auto;
+    gap: 36px;
+}
+
+.explore_card:hover {
+    .explore_btn {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
